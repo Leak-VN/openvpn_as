@@ -1,4 +1,5 @@
 # openvpn_as
+làm việc trên OpenVPN Access Server 2.11.3 của digitalocean
 
 Tải file pyovpn-2.0-py3.10.egg thay thế file trong đường dẫn /usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.10.egg
 
