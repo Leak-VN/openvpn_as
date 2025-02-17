@@ -1,0 +1,17 @@
+services:
+    "openvpn":
+        image: openvpn/openvpn-as
+        restart: unless-stopped
+        volumes:
+            - ./openvpn:/openvpn
+            - ./pyovpn-2.0-py3.10.egg:/usr/local/openvpn_as/lib/python/pyovpn-2.0-py3.10.egg
+        ports:
+            - '1194:1194/udp'
+            - '4434:4434'
+            - '943:943'
+        cap_add:
+            - NET_ADMIN
+            - MKNOD
+        devices:
+            - /dev/net/tun
+        container_name: openvpn-as
